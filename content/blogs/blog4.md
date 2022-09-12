@@ -10,6 +10,6 @@ description: Nullam et orci eu lorem consequat tincidunt vivamus et sagittis mag
 draft: false
 image: Ishaan_Leather_Jacket.jpg
 keywords: ""
-slug: About Me
+slug: aliquam
 title: About Me
 ---
