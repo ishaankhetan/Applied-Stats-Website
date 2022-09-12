@@ -80,10 +80,10 @@ params:
   tiles:
     enable: yes
     showcase:
-      - image: pic01.jpg
+      - image: LBS.jpg
         subtitle: Ipsum Dolor Sit Amet
         title: Aliquam
-        url: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/LBS_campus_2.jpg/350px-LBS_campus_2.jpg
+        url: blogs/aliquam
       - image: pic02.jpg
         subtitle: Feugiat Amet Tempus
         title: Tempus
