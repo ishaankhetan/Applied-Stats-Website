@@ -81,12 +81,12 @@ params:
     enable: yes
     showcase:
       - image: LBS.jpg
-        subtitle: Ipsum Dolor Sit Amet
-        title: Aliquam
+        subtitle: Learn more about me
+        title: About me
         url: blogs/aliquam
-      - image: pic02.jpg
-        subtitle: Feugiat Amet Tempus
-        title: Tempus
+      - image: Ishaan_Formals.jpg
+        subtitle: Learn more about my education and career
+        title: CV
         url: blogs/tempus
       - image: pic03.jpg
         subtitle: Lorem Etiam Nullam
