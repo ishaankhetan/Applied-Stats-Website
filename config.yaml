@@ -6,7 +6,7 @@ googleAnalytics: ''
 disqusShortname: ''
 params:
   banner:
-    -image: Ishaan_Leather_Jacket.jpg
+    image: Ishaan_Leather_Jacket.jpg
     buttonText: Get Started
     subtitle: |-
      Hi, this is my portfolio website displaying a few projects that I have worked on.
