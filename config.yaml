@@ -56,7 +56,7 @@ params:
   #     - icon: fa-linkedin
   #       label: LinkedIn
   #       url: https://www.linkedin.com
-  image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/LBS_campus_2.jpg/350px-LBS_campus_2.jpg'
+  #   image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/LBS_campus_2.jpg/350px-LBS_campus_2.jpg'
   name: Ishaan
   navigation:
     button1:
@@ -83,7 +83,7 @@ params:
       - image: pic01.jpg
         subtitle: Ipsum Dolor Sit Amet
         title: Aliquam
-        url: blogs/aliquam
+        url: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/LBS_campus_2.jpg/350px-LBS_campus_2.jpg
       - image: pic02.jpg
         subtitle: Feugiat Amet Tempus
         title: Tempus
