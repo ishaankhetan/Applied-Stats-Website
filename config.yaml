@@ -64,8 +64,8 @@ params:
       - name: Get Started
         url: blogs
     button2:
-      - name: Log In
-        url: '#'
+      - name: Download CV
+        url: 'docs/Ishaan Khetan CV LBS Consulting.pdf'
     links:
       - name: Home
         url: '#'
