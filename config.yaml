@@ -8,8 +8,8 @@ params:
   banner:
     buttonText: Get Started
     subtitle: |-
-     # A RESPONSIVE SITE TEMPLATE DESIGNED BY HTML5 UP
-     # AND RELEASED UNDER THE CREATIVE COMMONS.
+     # Hi, this is my portfolio website where I 
+     # have displayed a few projects that I have worked on.
     title: Hi, my name is Ishaan  Khetan.
   blog: {}
   contact:
@@ -76,8 +76,8 @@ params:
       # - name: Elements
       #   url: elements.html
     menu: Menu
-    subtitle: By HTML5 Up
-    title: Forty
+    subtitle: 
+    title: Ishaan's Portfolio Website
   tiles:
     enable: yes
     showcase:
