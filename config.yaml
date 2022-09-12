@@ -16,7 +16,7 @@ params:
     address:
       - city: London, NW8 8TE
         country: United Kingdom
-        street: 25, Hardwick House, \n Lilestone Street
+        street: Lilestone Street
         title: Address
     buttonClear: Clear
     buttonSend: Send message
@@ -57,7 +57,7 @@ params:
    #    - icon: fa-linkedin
    #      label: LinkedIn
    #      url: https://www.linkedin.com
-    image: Ishaan_Leather_Jacket.jpg
+   # image: Ishaan_Leather_Jacket.jpg
   name: Ishaan
   navigation:
     button1:
