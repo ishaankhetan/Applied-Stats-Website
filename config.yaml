@@ -61,7 +61,7 @@ params:
   name: Ishaan
   navigation:
     button1:
-      - name: Blogs
+      - name: Projects
         url: blogs
     button2:
       - name: Download CV
