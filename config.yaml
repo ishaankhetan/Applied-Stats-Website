@@ -34,7 +34,7 @@ params:
     text: Please visit [this page](/)
   favicon: favicon.ico
   footer:
-   copyright: LBS
+   # copyright: LBS
    #  enable: yes
    #  quicklinks:
    #    - alt: HTML5 UP
@@ -99,11 +99,11 @@ params:
       - image: pic05.jpg
         subtitle: Ipsum Dolor Sit Amet
         title: Consequat
-        url: blogs/ipsum
+        url: blogs/consequat
       - image: pic06.jpg
         subtitle: Feugiat Amet Tempus
         title: Etiam
-        url: blogs/ipsum
+        url: blogs/etiam
   two:
     buttonText: take a look at my projects
     enable: no
