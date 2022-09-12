@@ -16,8 +16,8 @@ params:
     address:
       - city: London, NW8 8TE
         country: United Kingdom
-        street: Lilestone Street
-        title: 25, Hardwick House
+        street: 25, Hardwick House, \n Lilestone Street
+        title: Address
     buttonClear: Clear
     buttonSend: Send message
     email:
