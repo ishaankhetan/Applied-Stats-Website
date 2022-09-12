@@ -8,9 +8,8 @@ params:
   banner:
     buttonText: Get Started
     subtitle: |-
-     # Hi, this is my portfolio website where I 
-     # have displayed a few projects that I have worked on.
-    title: Hi, my name is Ishaan  Khetan.
+     Hi, this is my portfolio website displaying a few projects that I have worked on.
+    title: Hi, my name is Ishaan Khetan.
   blog: {}
   contact:
     address:
@@ -57,7 +56,7 @@ params:
   #     - icon: fa-linkedin
   #       label: LinkedIn
   #       url: https://www.linkedin.com
-  # image: ''
+  image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/LBS_campus_2.jpg/350px-LBS_campus_2.jpg'
   name: Ishaan
   navigation:
     button1:
