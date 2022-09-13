@@ -8,7 +8,7 @@ params:
   banner:
     buttonText: Get Started
     subtitle: |-
-     Hi, this is my portfolio website displaying a few projects that I have worked on.
+     This is my portfolio website displaying a few projects that I have worked on.
     title: Hi, my name is Ishaan Khetan.
   blog: {}
   contact:
