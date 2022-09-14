@@ -28,7 +28,7 @@ knitr::opts_chunk$set(
 ```
 
 ```{r load-libraries, warning=FALSE, message=FALSE, echo=FALSE}
-library(tidyverse)  # Load ggplot2, dplyr, and all the other tidyverse packages
+library(tidyverse)  # Load ggplot2, dplyr, and all other tidyverse packages
 library(mosaic)
 library(ggthemes)
 library(lubridate)
@@ -37,6 +37,7 @@ library(skimr)
 library(janitor)
 library(vroom)
 library(tidyquant)
+library(infer)
 ```
 
 
@@ -50,7 +51,7 @@ In addition, you will run a hpothesis test. You should use both the `t.test` com
 
 > Before anything, write down the null and alternative hypotheses, as well as the resulting test statistic and the associated t-stat or p-value. At the end of the day, what do you conclude?
 
-> The null hypothesis is that there is no difference in the ratings between Spielberg and Burton movies. The alternative hypothesis is that there is a difference in ratings between the 2 directors.
+> The null hypothesis is that there is no difference in the ratings between Spielberg and Burton movies. The alternative hypothesis is that there is a difference in ratings between the 2 directors.  la la 
 >
 > `t = 3` `p-value = 0.01`
 
