@@ -5,10 +5,10 @@ categories:
 date: "2017-10-31T22:26:09-05:00"
 description: "Rental statistics analysis of TFL bikes in London"
 draft: false
-image: bike.jpg
+image: imdb.png
 keywords: ""
 slug: imdb1
-title: TFL Bikes Data Analysis
+title: IMDB Data Analysis
 ---
 ```{r, setup, include=FALSE}
 knitr::opts_chunk$set(
