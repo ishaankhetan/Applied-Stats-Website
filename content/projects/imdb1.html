@@ -3,7 +3,7 @@ categories:
 - ""
 - ""
 date: "2017-10-31T21:28:43-05:00"
-description: ""
+description: "Analysis of movies and directors using IMDb"
 draft: true
 image: imdb.png
 keywords: ""
@@ -148,7 +148,7 @@ movies %&gt;%
     y=&quot;% Density&quot;
     ) +
   theme(legend.position = &quot;none&quot;)</code></pre>
-<p><img src="/blogs/blog1_files/figure-html/unnamed-chunk-5-1.png" width="648" style="display: block; margin: auto;" /></p>
+<p><img src="/projects/imdb1_files/figure-html/unnamed-chunk-5-1.png" width="648" style="display: block; margin: auto;" /></p>
 <p>Confidence interval for mean ratings between Spielberg and Burton</p>
 <pre class="r"><code> confidence_interval &lt;- movies %&gt;% 
   filter(director == &#39;Steven Spielberg&#39; | director==&#39;Tim Burton&#39;) %&gt;% 
@@ -185,7 +185,7 @@ ggplot(confidence_interval, aes(x=mean_rating, y=director)) +
   theme(legend.position = &#39;none&#39;) +
   
   NULL</code></pre>
-<p><img src="/blogs/blog1_files/figure-html/replicating%20Burton,%20Spielberg%20IMDB%20ratings-1.png" width="648" style="display: block; margin: auto;" /></p>
+<p><img src="/projects/imdb1_files/figure-html/replicating%20Burton,%20Spielberg%20IMDB%20ratings-1.png" width="648" style="display: block; margin: auto;" /></p>
 <p>T-Test for mean ratings using t_test</p>
 <pre class="r"><code>t_data &lt;- movies %&gt;% 
                  filter(director == &#39;Steven Spielberg&#39; | director==&#39;Tim Burton&#39;)
@@ -220,7 +220,7 @@ sim &lt;- movies %&gt;%
 
 visualize(sim) +
   shade_p_value(obs_stat = obs, direction = &quot;greater&quot;)</code></pre>
-<p><img src="/blogs/blog1_files/figure-html/using%20infer-1.png" width="648" style="display: block; margin: auto;" /></p>
+<p><img src="/projects/imdb1_files/figure-html/using%20infer-1.png" width="648" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>sim %&gt;%
   get_p_value(obs_stat = obs, direction = &quot;greater&quot;)</code></pre>
 <pre><code>## # A tibble: 1 × 1
