@@ -61,7 +61,7 @@ params:
   navigation:
     button1:
       - name: Projects
-        url: blogs
+        url: projects
     button2:
       - name: Download CV
         url: 'docs/Ishaan Khetan CV LBS Consulting.pdf'
@@ -95,7 +95,7 @@ params:
       - image: pic04.jpg
         subtitle: Nisl Sed Aliquam
         title: Ipsum
-        url: blogs/blog1.html
+        url: blogs/ipsum
       - image: pic05.jpg
         subtitle: Ipsum Dolor Sit Amet
         title: Consequat
