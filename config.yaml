@@ -91,7 +91,7 @@ params:
       - image: bike.jpg
         subtitle: Rental statistics analysis of TFL bikes in London
         title: TFL Bike Rentals Data Analysis
-        url: blogs/magna
+        url: blogs/bike
       - image: imdb.png
         subtitle: Analysis of movies and directors using IMDb
         title: IMDB Data Analysis
