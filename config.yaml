@@ -93,8 +93,8 @@ params:
         title: Magna
         url: blogs/magna
       - image: imdb.png
-        subtitle: Nisl Sed Aliquam
-        title: Ipsum
+        subtitle: 
+        title: IMDB Data Analysis
         url: blogs/ipsum
       - image: pic05.jpg
         subtitle: Ipsum Dolor Sit Amet
