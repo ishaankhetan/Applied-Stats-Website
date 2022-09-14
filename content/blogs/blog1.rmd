@@ -5,10 +5,10 @@ categories:
 date: "2017-10-31T21:28:43-05:00"
 description: ""
 draft: true
-image: pic10.jpg
+image: imdb.png
 keywords: ""
 slug: ipsum
-title: Ipsum
+title: IMDB Data Analysis
 ---
 
 ```{r, setup, echo=FALSE}
@@ -41,25 +41,75 @@ library(infer)
 ```
 
 
-```{r directors, , out.width="100%"}
-knitr::include_graphics(here::here("images", "directors.png"), error = FALSE)
-```
-
-First, I would like you to reproduce this graph. You may find `geom_errorbar()` and `geom_rect()` useful.
-
-In addition, you will run a hpothesis test. You should use both the `t.test` command and the `infer` package to simulate from a null distribution, where you assume zero difference between the two.
-
-> Before anything, write down the null and alternative hypotheses, as well as the resulting test statistic and the associated t-stat or p-value. At the end of the day, what do you conclude?
-
-> The null hypothesis is that there is no difference in the ratings between Spielberg and Burton movies. The alternative hypothesis is that there is a difference in ratings between the 2 directors.  la la 
->
-> `t = 3` `p-value = 0.01`
-
+Loading the data
 ```{r load-movies-data}
 movies <- read_csv(here::here("data", "movies.csv"))
 glimpse(movies)
 ```
 
+
+Count of movies by genre, ranked in descending order
+
+```{r}
+movies %>% 
+  group_by(genre) %>% 
+  summarise(count_genre = count(genre)) %>% 
+  arrange(desc(count_genre))
+```
+
+Average gross earning and budget (`gross` and `budget`) by genre
+
+```{r}
+movies %>% 
+  group_by(genre) %>% 
+  summarise(mean_gross = mean(gross), mean_budget = mean(budget)) %>% 
+  mutate(return_on_budget = mean_gross/mean_budget) %>% 
+  arrange(desc(return_on_budget))
+  
+```
+
+Top 15 directors who have created the highest gross revenue in the box office
+
+```{r}
+movies %>% 
+  group_by(director) %>% 
+  summarise(total_gross = sum(gross), 
+            mean_gross = mean(gross), 
+            med_gross = median(gross),
+            sd_gross = sd(gross)) %>% 
+  slice_max(total_gross, n=15)
+```
+
+Ratings by genre.
+```{r}
+# TABLE WITH SUMMARY STATISTICS
+movies %>% 
+  group_by(genre) %>% 
+  summarise(mean_rating  = mean(rating), 
+            min_rating   = min(rating),
+            max_rating   = max(rating),
+            med_rating   = median(rating),
+            sd_rating    = sd(rating))
+```
+
+```{r}
+movies %>% 
+  ggplot(aes(x = rating, color = genre, fill = genre)) +
+  geom_density(size=1, alpha = .1) +
+  theme_minimal() +
+  facet_wrap(~genre) +
+  labs(
+    title="Ratings density by Genre",
+    subtitle="IMDB Movies Dataset",
+    caption = "Source: Kaggle IMDB 5000 movie dataset",
+    x="Rating",
+    y="% Density"
+    ) +
+  theme(legend.position = "none")
+```
+
+
+Confidence interval for mean ratings between Spielberg and Burton
 ```{r replicating Burton, Spielberg IMDB ratings}
 
  confidence_interval <- movies %>% 
@@ -100,6 +150,8 @@ ggplot(confidence_interval, aes(x=mean_rating, y=director)) +
 
 ```
 
+
+T-Test for mean ratings using t_test
 ```{r, t_test}
 t_data <- movies %>% 
                  filter(director == 'Steven Spielberg' | director=='Tim Burton')
@@ -107,6 +159,7 @@ t.test(rating~director, t_data)
 
 ```
 
+T-test for mean ratings using infer
 ```{r, using infer}
 
 # calculating observed statistic

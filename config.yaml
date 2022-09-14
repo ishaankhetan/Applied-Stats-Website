@@ -92,7 +92,7 @@ params:
         subtitle: Lorem Etiam Nullam
         title: Magna
         url: blogs/magna
-      - image: pic04.jpg
+      - image: imdb.png
         subtitle: Nisl Sed Aliquam
         title: Ipsum
         url: blogs/ipsum
