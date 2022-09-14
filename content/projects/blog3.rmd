@@ -3,7 +3,7 @@ categories:
 - ""
 - ""
 date: "2017-10-31T22:26:09-05:00"
-description: "Rental statistics analysis of TFL bikes in London"
+description: "Analysis of movies and directors from IMDb"
 draft: false
 image: imdb.png
 keywords: ""
