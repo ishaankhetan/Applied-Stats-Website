@@ -100,10 +100,10 @@ params:
         subtitle: 
         title: Time Series Forecast of Rubber Prices Download Report
         url: docs/Rubber.pdf
-      - image: pic06.jpg
-        subtitle: Feugiat Amet Tempus
-        title: Etiam
-        url: blogs/etiam
+      - image: law.jpg
+        subtitle: 
+        title: Topic-Modelling Based Approach for Clustering Legal Documents
+        url: docs/Topic-Modelling Based Approach for Clustering Legal Documents.pdf
   two:
     buttonText: take a look at my projects
     enable: no
