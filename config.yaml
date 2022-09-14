@@ -88,18 +88,18 @@ params:
         subtitle: Learn more about my education and career
         title: CV
         url: blogs/tempus
-      - image: pic03.jpg
-        subtitle: Lorem Etiam Nullam
-        title: Magna
+      - image: bike.jpg
+        subtitle:
+        title: TFL Bike Rentals Data Analysis
         url: blogs/magna
       - image: imdb.png
         subtitle: 
         title: IMDB Data Analysis
         url: blogs/ipsum
-      - image: pic05.jpg
-        subtitle: Ipsum Dolor Sit Amet
-        title: Consequat
-        url: blogs/consequat
+      - image: rubber.jpg
+        subtitle: 
+        title: Time Series Forecast of Rubber Prices Download Report
+        url: docs/Rubber.pdf
       - image: pic06.jpg
         subtitle: Feugiat Amet Tempus
         title: Etiam
