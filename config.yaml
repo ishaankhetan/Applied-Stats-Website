@@ -95,7 +95,7 @@ params:
       - image: pic04.jpg
         subtitle: Nisl Sed Aliquam
         title: Ipsum
-        url: blogs/ipsum
+        url: blogs/blog1.html
       - image: pic05.jpg
         subtitle: Ipsum Dolor Sit Amet
         title: Consequat

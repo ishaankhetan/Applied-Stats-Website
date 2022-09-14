@@ -1,0 +1,135 @@
+---
+categories:
+- ""
+- ""
+date: "2017-10-31T21:28:43-05:00"
+description: ""
+draft: true
+image: pic10.jpg
+keywords: ""
+slug: ipsum
+title: Ipsum
+---
+
+```{r, setup, echo=FALSE}
+knitr::opts_chunk$set(
+  message = FALSE, 
+  warning = FALSE, 
+  tidy=FALSE,     # display code as typed
+  size="small")   # slightly smaller font for code
+options(digits = 3)
+
+# default figure size
+knitr::opts_chunk$set(
+  fig.width=6.75, 
+  fig.height=6.75,
+  fig.align = "center"
+)
+```
+
+```{r load-libraries, warning=FALSE, message=FALSE, echo=FALSE}
+library(tidyverse)  # Load ggplot2, dplyr, and all other tidyverse packages
+library(mosaic)
+library(ggthemes)
+library(lubridate)
+library(here)
+library(skimr)
+library(janitor)
+library(vroom)
+library(tidyquant)
+library(infer)
+```
+
+
+```{r directors, , out.width="100%"}
+knitr::include_graphics(here::here("images", "directors.png"), error = FALSE)
+```
+
+First, I would like you to reproduce this graph. You may find `geom_errorbar()` and `geom_rect()` useful.
+
+In addition, you will run a hpothesis test. You should use both the `t.test` command and the `infer` package to simulate from a null distribution, where you assume zero difference between the two.
+
+> Before anything, write down the null and alternative hypotheses, as well as the resulting test statistic and the associated t-stat or p-value. At the end of the day, what do you conclude?
+
+> The null hypothesis is that there is no difference in the ratings between Spielberg and Burton movies. The alternative hypothesis is that there is a difference in ratings between the 2 directors.  la la 
+>
+> `t = 3` `p-value = 0.01`
+
+```{r load-movies-data}
+movies <- read_csv(here::here("data", "movies.csv"))
+glimpse(movies)
+```
+
+```{r replicating Burton, Spielberg IMDB ratings}
+
+ confidence_interval <- movies %>% 
+  filter(director == 'Steven Spielberg' | director=='Tim Burton') %>% 
+  group_by(director) %>% 
+  summarize(mean_rating = mean(rating),
+            sd_rating = sd(rating), 
+            count=n(),
+            t_critical = qt(0.975, count-1),
+            se_rating = sd(rating)/sqrt(count),
+            margin_of_error = t_critical * se_rating, 
+            rating_high = mean_rating + margin_of_error, 
+            rating_low = mean_rating - margin_of_error) 
+
+points <- confidence_interval %>% 
+  select(c('director', 'mean_rating','rating_high','rating_low'))
+
+ggplot(confidence_interval, aes(x=mean_rating, y=director)) +
+  
+  geom_rect(aes(xmin = 7.27, xmax = 7.33, ymin = -Inf, ymax = Inf), fill="light gray") +
+  
+  geom_errorbar(aes(xmin=rating_low, xmax=rating_high, colour=director), width=.2,
+                 position=position_dodge(.9)) +
+  
+  geom_point(data=points, aes(x=mean_rating, y=director)) +
+  geom_text(aes(label=round(mean_rating, digits=2)), nudge_y=0.04, size=3) +
+  
+  geom_point(data=points, aes(x=rating_high, y=director)) +
+  geom_text(aes(label=round(rating_high, digits=2)), nudge_x=0.35, nudge_y=0.04, size=3) +
+  
+  geom_point(data=points, aes(x=rating_low, y=director)) +
+  geom_text(aes(label=round(rating_low, digits=2)), nudge_x=-0.35, nudge_y=0.04, size=3) +
+  
+  labs(title="Do Spielberg and Burton have the same mean IMDB ratings?", subtitle="95% confidence intervals overlap", x="Mean IMDB Rating", y="") +
+  theme(legend.position = 'none') +
+  
+  NULL
+
+```
+
+```{r, t_test}
+t_data <- movies %>% 
+                 filter(director == 'Steven Spielberg' | director=='Tim Burton')
+t.test(rating~director, t_data)
+
+```
+
+```{r, using infer}
+
+# calculating observed statistic
+obs <- movies %>% 
+  filter(director == 'Steven Spielberg' | director=='Tim Burton') %>% 
+  specify(rating ~ director) %>% 
+  calculate(stat = "diff in means")
+
+# simulate data
+set.seed(4567)
+sim <- movies %>% 
+  filter(director == 'Steven Spielberg' | director=='Tim Burton') %>% 
+  specify(rating ~ director) %>% 
+  hypothesize(null = "independence") %>% 
+  generate(reps=1000, type='permute') %>% 
+  calculate(stat="diff in means")
+
+
+visualize(sim) +
+  shade_p_value(obs_stat = obs, direction = "greater")
+
+sim %>%
+  get_p_value(obs_stat = obs, direction = "greater")
+
+
+```
