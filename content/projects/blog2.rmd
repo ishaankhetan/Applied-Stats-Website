@@ -7,7 +7,7 @@ description: "Rental statistics analysis of TFL bikes in London"
 draft: false
 image: bike.jpg
 keywords: ""
-slug: magna
+slug: bike
 title: TFL Bikes Data Analysis
 ---
 ```{r, setup, include=FALSE}
