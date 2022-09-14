@@ -89,19 +89,19 @@ params:
         title: CV
         url: blogs/tempus
       - image: bike.jpg
-        subtitle:
+        subtitle: Rental statistics analysis of TFL bikes in London
         title: TFL Bike Rentals Data Analysis
         url: blogs/magna
       - image: imdb.png
-        subtitle: 
+        subtitle: Analysis of movies and directors using IMDb
         title: IMDB Data Analysis
         url: blogs/ipsum
       - image: rubber.jpg
-        subtitle: 
+        subtitle: Data Science project for a Big 4 firm where I forecasted Rubber Prices via Time Series Analysis
         title: Time Series Forecast of Rubber Prices Download Report
         url: docs/Rubber.pdf
       - image: law.jpg
-        subtitle: 
+        subtitle: Final year project for my undergrad that has been published at Scopus Indexed ICTCS journal
         title: Topic-Modelling Based Approach for Clustering Legal Documents
         url: docs/Topic-Modelling Based Approach for Clustering Legal Documents.pdf
   two:

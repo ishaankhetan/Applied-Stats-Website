@@ -5,4 +5,4 @@ image: pic02.jpg
 slug: blogs
 title: Projects
 ---
-
+A few Data analysis projects in R that I have recently worked on
