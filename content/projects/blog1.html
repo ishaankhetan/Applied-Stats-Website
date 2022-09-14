@@ -7,7 +7,7 @@ description: "Analysis of movies and directors using IMDb"
 draft: true
 image: imdb.png
 keywords: ""
-slug: ipsum
+slug: imdb
 title: IMDB Data Analysis
 ---
 
@@ -80,7 +80,7 @@ glimpse(movies)</code></pre>
 ## 15 Action       86583860.   71354888.          1.21   
 ## 16 Sci-Fi       29788371.   27607143.          1.08   
 ## 17 Thriller         2468      300000           0.00823</code></pre>
-<p>Top 15 directors who have created the highest gross revenue in the box office hello</p>
+<p>Top 15 directors who have created the highest gross revenue in the box office</p>
 <pre class="r"><code>movies %&gt;% 
   group_by(director) %&gt;% 
   summarise(total_gross = sum(gross), 

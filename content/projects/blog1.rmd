@@ -7,7 +7,7 @@ description: "Analysis of movies and directors using IMDb"
 draft: true
 image: imdb.png
 keywords: ""
-slug: ipsum
+slug: imdb
 title: IMDB Data Analysis
 ---
 
@@ -68,7 +68,7 @@ movies %>%
   
 ```
 
-Top 15 directors who have created the highest gross revenue in the box office hello
+Top 15 directors who have created the highest gross revenue in the box office
 
 ```{r}
 movies %>% 
