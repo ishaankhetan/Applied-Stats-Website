@@ -95,7 +95,7 @@ params:
       - image: imdb.png
         subtitle: Analysis of movies and directors using IMDb
         title: IMDB Data Analysis
-        url: blogs/imdb_new
+        url: blogs/imdb1
       - image: rubber.jpg
         subtitle: Data Science project for a Big 4 firm where I forecasted Rubber Prices via Time Series Analysis
         title: Time Series Forecast of Rubber Prices Download Report
